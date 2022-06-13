@@ -10,9 +10,10 @@ export default function Detail(props) {
     const params = useParams();
 
     // Сверяем значение айди карточки по который юзер кликнул и роута по которой он перешел. Если значения равны то показываем именно тот контент на которой кликнули
-    const filteredData = data.filter(item => item.id === Number(params.id))
+    const filteredData = data.filter(item => item.id === params.id)
 
     // array.filter возвращает реузльтат в нутри еще одного массива
+    
     const detail = filteredData[0];
 
     return (
