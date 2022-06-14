@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Routes, Route, Link, renderMatches } from "react-router-dom";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
@@ -8,7 +6,6 @@ import Articles from "./components/Articles";
 import Article from "./components/Article";
 import Detail from "./components/Detail";
 
->>>>>>> internship-fe-1-1
 function App() {
   const [articles, setArticles] = useState([]);
   const articlesCollectionRef = collection(db, "articles");
