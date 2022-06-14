@@ -13,7 +13,7 @@ export default function Detail(props) {
     const filteredData = data.filter(item => item.id === params.id)
 
     // array.filter возвращает реузльтат в нутри еще одного массива
-    
+
     const detail = filteredData[0];
 
     return (
@@ -21,7 +21,9 @@ export default function Detail(props) {
             <h1 className="detail-title">
                 {detail.title}
             </h1>
-            <img src={detail.imageUrl} alt="img" style={{height: "800px"}}/>
+            <div className="img-container">
+                <img src={detail.imageUrl} alt="img" style={{ height: "800px", width: "2100px", margin: "auto" }} />
+            </div>
             <h4 className="detail-description">
                 {detail.description}
             </h4>

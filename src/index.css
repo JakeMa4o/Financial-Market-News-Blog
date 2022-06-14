@@ -35,8 +35,10 @@ img {
   font-weight: 700;
   font-size: 36px;
   line-height: 47px;
+}
 
-
+span {
+  font-size: 25px;
 }
 
 .articles {
@@ -88,8 +90,10 @@ img {
   padding: 64px 121px;
 }
 
-.detail img {
-  height: 50rem;
+.img-container {
+  display: grid;
+  place-items: center;
+  height: 900px;
 }
 
 .detail-title {
@@ -117,4 +121,12 @@ img {
   font-size: 20px;
   line-height: 26px;
   padding: 18px 43px;
+}
+
+.loading {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #839695;
+  color: #fff;
 }

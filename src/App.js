@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, renderMatches } from "react-router-dom";
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
@@ -20,6 +20,10 @@ function App() {
 
   }, []);
 
+  if (articles.length === 0) {
+    return <div className="loading"><h1> loading... </h1></div>
+  }
+
   // Создаю Артиклы (карточки) из массива данных
   const articlesCards = articles.map((article) => {
     return (
@@ -35,7 +39,7 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <Link to="/">SHARETRADE.com</Link>
+        <Link to="/">SHARETRADE.<span>COM</span></Link>
       </nav>
       <Routes>
         <Route path="/" element={<Articles articles={articlesCards} />} />
